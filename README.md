@@ -1,84 +1,44 @@
 # Frontend Boilerplate
 
-A modern, customizable boilerplate for building web frontends using **Next.js**, **TypeScript**, and **Tailwind CSS** — designed for fast development and scalable architecture.
-
+A barebones boilerplate for building mobile web frontends using **Next.js**, **TypeScript**, and **Tailwind CSS** designed for fast development.
 
 ## Tech Stack
 
-- [Next.js](https://nextjs.org/) – React framework for production
 - [TypeScript](https://www.typescriptlang.org/) – Static typing for JavaScript
+- [Next.js](https://nextjs.org/) – React framework for production
 - [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS framework
 
 ## Features
 
-- Minimal, clean project structure
-- Preconfigured TypeScript and Tailwind setup
-- Easy scalability for large frontend projects
+- A minimal boilerplate with few dependencies.
+- Multi-purpose use ( ranging from static to dynamic websites and apps)
+- Mobile-first and responsive friendly.
+- Dependencies/tools/frameworks used by the leading frontend community and great community support.
+
+
+## Prerequisites
+
+1. First setup your workspace
+
+   - [Linux, MacOS](https://github.com/Madhyamakist/workspace-setup-mac)
+   - [Windows](https://github.com/Madhyamakist/workspace-setup-windows)
+
+
+2. Before getting started, ensure `asdf` is installed and working.This project uses [asdf](https://asdf-vm.com/) to manage language versions. 
 
 ## Getting Started
 
-## For Windows
 Clone the repository and run the setup:
 
 ```bash
-git clone https://github.com/your-org/frontend-boilerplate-js.git
-cd frontend-boilerplate-js
+git clone https://github.com/your-org/frontend-boilerplate-js.git myproject
+cd myproject/code
 npm install
 npm run dev
 ```
-## For Linux/macOS
+## Create a Fresh Next.js Project
 
-## Project Setup and Run Instructions
-
-Prerequisites
-
-Make sure you have the following installed:
-
-- [bash](https://www.gnu.org/software/bash/) (for running shell scripts)
-- Necessary dependencies (defined inside `setup.sh`)
-
----
-
-## Setup Instructions
-
-1. Open your terminal.
-2. Navigate to the project root directory.
-3. Run the setup script:
-
+If you prefer to start from scratch with the latest official Next.js setup, run:
 ```bash
-cd scripts
-chmod +x setup.sh
-./setup.sh
+npx create-next-app@latest myproject --typescript --tailwind --eslint --app --src-dir --import-alias "@/*"
 ```
-
-The `setup.sh` script will install all required dependencies and perform the necessary project setup.
-
----
-
-## Running the Project
-
-Once setup is complete:
-
-```bash
-cd scripts
-chmod +x start.sh
-./start.sh
-```
-
-This will start the project.
-
----
-
-## Troubleshooting
-
-- Ensure you have execute permissions for both scripts using:
-  ```bash
-  chmod +x scripts/setup.sh scripts/start.sh
-  ```
-- If you encounter permission issues, try running with `sudo` (only if necessary):
-  ```bash
-  sudo ./setup.sh
-  sudo ./start.sh
-  ```
-
-
