@@ -40,5 +40,5 @@ npm run dev
 
 If you prefer to start from scratch with the latest official Next.js setup, run:
 ```bash
-npx create-next-app@15.0.0 myproject --typescript --tailwind --eslint --app --src-dir --import-alias "@/*" --turbo
+npx create-next-app@15.3.4 myproject --typescript --tailwind --eslint --app --src-dir --import-alias "@/*" --turbopack
 ```
