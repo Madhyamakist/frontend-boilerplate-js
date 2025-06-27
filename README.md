@@ -24,7 +24,7 @@ A barebones boilerplate for building mobile web frontends using **Next.js**, **T
    - [Windows](https://github.com/Madhyamakist/workspace-setup-windows)
 
 
-2. Before getting started, ensure `asdf` is installed and working.This project uses [asdf](https://asdf-vm.com/) to manage language versions. 
+2. Before getting started, ensure `asdf` and node plugin is installed and working.This project uses [asdf](https://asdf-vm.com/) to manage language versions. 
 
 ## Getting Started
 
@@ -40,5 +40,5 @@ npm run dev
 
 If you prefer to start from scratch with the latest official Next.js setup, run:
 ```bash
-npx create-next-app@latest myproject --typescript --tailwind --eslint --app --src-dir --import-alias "@/*"
+npx create-next-app@15.0.0 myproject --typescript --tailwind --eslint --app --src-dir --import-alias "@/*" --turbo
 ```
