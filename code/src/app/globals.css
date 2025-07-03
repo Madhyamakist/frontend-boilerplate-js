@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #c4bbaf;
+  --foreground: #5c4742;
   --font-sans: var(--font-montserrat);
 }
 
@@ -13,13 +13,28 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #c4bbaf;
+    --foreground: #5c4742;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-montserrat), sans-serif;
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-montserrat), sans-serif;
+  }
+
+  h1 {
+    @apply font-bold  text-center text-2xl sm:text-3xl md:text-3xl lg:text-4xl m-4;
+  }
+
+  p {
+    @apply text-sm sm:text-lg md:text-lg lg:text-lg text-justify m-4;
+  }
+}
+@layer components {
+  .title {
+    @apply text-4xl font-bold;
+  }
 }
