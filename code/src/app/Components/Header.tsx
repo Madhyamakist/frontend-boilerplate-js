@@ -1,7 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Header() {
+interface HeaderProps{
+    heading:string;
+    linkHref:string;
+}
+
+export default function Header(props: HeaderProps) {
     return (
         <header> 
             <div className="-m-6">
@@ -13,9 +18,9 @@ export default function Header() {
                   
                 />
             </div>
-            <Link href="dynamic">
+            <Link href={props.linkHref}>
             <h2 className="head-text">
-                Dynamic Page
+                {props.heading}
             </h2>
             </Link>
 
