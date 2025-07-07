@@ -15,6 +15,7 @@ h1 {
 h2 {
   @apply font-[600]
     mx-4
+    my-2
     text-lg
     sm:text-xl
     md:text-2xl
