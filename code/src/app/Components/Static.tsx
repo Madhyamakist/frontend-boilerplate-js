@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function Static() {
     return (
         <div className="p-4 justify-center">
-            <h1>Hello World</h1>
+            <h1>Static Page</h1>
             <Section />
             <Section />
             <Image
