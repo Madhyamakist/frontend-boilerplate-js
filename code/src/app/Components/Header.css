@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+header {
+  @apply bg-brown 
+    w-full h-20 p-4 
+    flex justify-between 
+    border-1 border-black 
+    shadow-xl/15;
+}
+.head-text {
+  @apply text-cream 
+    my-3;
+}
