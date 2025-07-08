@@ -3,6 +3,7 @@
 @import "./components/core/header.css";
 @import "./components/typography.css";
 
+
 @theme inline {
   --color-cream: #c4bbaf;
   --color-brown: #5c4742;
