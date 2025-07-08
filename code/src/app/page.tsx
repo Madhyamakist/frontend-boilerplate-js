@@ -1,4 +1,4 @@
-import Static from "./Components/Static";
+import Static from "./static/page";
 
 export default function Home() {
   return (

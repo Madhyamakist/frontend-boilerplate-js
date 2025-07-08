@@ -1,4 +1,4 @@
-import Section from '../Components/Section';
+import Section from '../components/section';
 import Image from 'next/image';
 
 export default function Static() {
