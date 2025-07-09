@@ -1,7 +1,6 @@
-export default function Static() {
+export default function Section() {
     return (
-        <div className="p-4">
-            <h1>Hello World</h1>
+        <div>
             <h2>Lorem ipsum</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

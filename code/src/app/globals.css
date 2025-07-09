@@ -1,7 +1,8 @@
 @import "tailwindcss";
-@import "./Components/Header.css";
-@import "./Components/Footer.css";
-@import "./Components/Typography.css";
+@import "./components/core/footer.css";
+@import "./components/core/header.css";
+@import "./components/typography.css";
+
 
 @theme inline {
   --color-cream: #c4bbaf;
