@@ -1,9 +1,4 @@
-
-interface CardProps {
-  title: string;
-  image: string;
-  subtitle?: string;
-}
+import { CardProps } from '../../models/card';
 
 export default function Card({ title, image, subtitle }: CardProps) {
   const imageUrl = image || '/placeholder.jpg';

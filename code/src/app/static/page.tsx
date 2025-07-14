@@ -10,7 +10,7 @@ export default function Static() {
             <Image
                 src="/demo.png"
                 alt="Demo Image"
-                width={3200}
+                width={320}
                 height={320}
                 className=' mx-auto my-4 px-4'
             />

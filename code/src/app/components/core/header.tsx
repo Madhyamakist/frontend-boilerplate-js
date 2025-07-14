@@ -2,19 +2,12 @@
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import { getRouteInfo } from "@/app/constants/routes";
 
 
 export default function Header() {
     const pathname = usePathname();
-
-
-    let heading = "Dynamic Page";
-    let linkHref = "/dynamic";
-
-    if (pathname === "/dynamic") {
-        heading = "Static Page";
-        linkHref = "/";
-    }
+    const { title, linkHref } = getRouteInfo(pathname);
 
     return (
         <header>
@@ -29,7 +22,7 @@ export default function Header() {
             </div>
             <Link href={linkHref}>
                 <h2 className="head-text">
-                    {heading}
+                    {title}
                 </h2>
             </Link>
 
