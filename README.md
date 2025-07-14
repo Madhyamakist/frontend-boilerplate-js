@@ -17,12 +17,27 @@ A barebones boilerplate for building mobile web frontends using **Next.js**, **T
 
 ## Prerequisites
 
-1. First setup your workspace
+### Setup your workspace
 
    - [Linux, MacOS](https://github.com/Madhyamakist/workspace-setup-mac)
    - [Windows](https://github.com/Madhyamakist/workspace-setup-windows)
 
-2. Before getting started, ensure `asdf` and node plugin is installed and working.This project uses [asdf](https://asdf-vm.com/) to manage language versions.
+
+### Ensure Node version consistency
+
+The node version needs to be the same as mentioned in the `.tool-versions` file.
+
+Install the node version if not installed:
+```
+asdf install nodejs X.Y.Z
+```
+
+Make sure the correct node version has been set before you work on this project.
+```
+node -v
+```
+
+Before getting started, ensure `asdf` and node plugin is installed and working.This project uses [asdf](https://asdf-vm.com/) to manage language versions. 
 
 ## Getting Started
 
