@@ -15,7 +15,6 @@ A barebones boilerplate for building mobile web frontends using **Next.js**, **T
 - Mobile-first and responsive friendly.
 - Dependencies/tools/frameworks used by the leading frontend community and great community support.
 
-
 ## Prerequisites
 
 ### Setup your workspace
@@ -50,9 +49,37 @@ cd myproject/code
 npm install
 npm run dev
 ```
+
 ## Create a Fresh Next.js Project
 
 If you prefer to start from scratch with the latest official Next.js setup, run:
+
 ```bash
 npx create-next-app@15.3.4 myproject --typescript --tailwind --eslint --app --src-dir --import-alias "@/*" --turbopack
 ```
+
+## Project Structure Breakdown
+
+Inside the `code/` folder, you'll find the actual application source files and config files:
+
+- **`api/`**  
+  Contains helper functions that abstract away `fetch` calls to external APIs. Makes code modular and testable.
+
+- **`components/`**  
+  All shared UI components go here. These are purely presentational.
+
+- **`dynamic/`**  
+Contains dropdown to select a department from the Met Museum API and fetches the top 10 items from the selected department with their details
+
+- **`hooks/`**  
+ Hooks are tools that help the webpage remember things (like user input or choices) and respond when something changes. They make the website interactive and dynamic without using complex code.
+
+- **`models/`**  
+  Holds all TypeScript interfaces and types for API data. Keeps models consistent across files.
+
+- **`static/`**  
+   Has static hardcoded content with sample text,headings and image. 
+
+  
+
+---

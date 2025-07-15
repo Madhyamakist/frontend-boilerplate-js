@@ -1,12 +1,38 @@
-export default function DynamicPage() {
+'use client';
+import Dropdown, { DropdownOption } from '../components/common/dropdown';
+import Card from '../components/common/card';
+import { Department } from '../models/department';
+import { fetchDepartments } from '../api/metMuseum';
+import useDepartmentList from '../hooks/useDepartmentList';
+
+export default function HomePage() {
+    const { loading, listItems, handleDepartmentSelect } = useDepartmentList();
+
+    const loadDepartments = async (): Promise<DropdownOption<number>[]> => {
+        const data: Department[] = await fetchDepartments();
+        return data.map((d) => ({ label: d.displayName, value: d.departmentId }));
+    };
+
     return (
-        <div className="p-4">
+        <div className="p-4 justify-center">
             <h1>Dynamic Page</h1>
-             <h2>Lorem ipsum</h2>
-            <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            </p>
+            <h2 className="deptTxt">Select Department Type</h2>
+            <Dropdown label="Select Department" fetchOptions={loadDepartments} onSelect={handleDepartmentSelect} />
+
+            {loading ? (
+                <p className="mt-6">Loading...</p>
+            ) : (
+                <div className="objCard">
+                    {listItems.map(item => (
+                        <Card
+                            key={item.objectID}
+                            title={item.title}
+                            image={item.primaryImageSmall}
+                            subtitle={item.artistDisplayName}
+                        />
+                    ))}
+                </div>
+            )}
         </div>
     );
 }
