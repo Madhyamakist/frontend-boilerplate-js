@@ -1,7 +1,7 @@
 'use client';
 import Dropdown, { DropdownOption } from '../components/common/dropdown';
 import Card from '../components/common/card';
-import { Department } from '../models/listItems';
+import { Department } from '../models/department';
 import { fetchDepartments } from '../api/metMuseum';
 import useDepartmentList from '../hooks/useDepartmentList';
 

@@ -68,14 +68,11 @@ Inside the `code/` folder, you'll find the actual application source files and c
 - **`components/`**  
   All shared UI components go here. These are purely presentational.
 
-- **`constants/`**  
-  Central place to define config values, enums, or static options that are reused.
-
 - **`dynamic/`**  
 Contains dropdown to select a department from the Met Museum API and fetches the top 10 items from the selected department with their details
 
 - **`hooks/`**  
-  Contains custom hooks to handle data fetching and business logic.
+ Hooks are tools that help the webpage remember things (like user input or choices) and respond when something changes. They make the website interactive and dynamic without using complex code.
 
 - **`models/`**  
   Holds all TypeScript interfaces and types for API data. Keeps models consistent across files.

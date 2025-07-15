@@ -2,7 +2,7 @@
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { getRouteInfo } from "@/app/constants/routes";
+import { getRouteInfo } from "../../routes";
 
 
 export default function Header() {
