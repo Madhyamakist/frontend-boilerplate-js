@@ -2,12 +2,9 @@
 
 header {
   @apply bg-brown 
-    w-full h-20 p-4 
+    w-full 
     flex justify-between 
-    border-1 border-black 
-    shadow-xl/15;
-}
-.head-text {
-  @apply text-cream 
-    my-3;
+    border-licorice border-b-1
+    shadow-xl/25
+    p-2 items-center;
 }

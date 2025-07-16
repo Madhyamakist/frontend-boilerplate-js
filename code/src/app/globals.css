@@ -7,7 +7,13 @@
 
 @theme inline {
   --color-cream: #c4bbaf;
+  --color-cinereous: #A5978B;
   --color-brown: #5c4742;
+  --color-liver: #5C4742;
+  --color-redwood: #8D5B4C;
+  --color-caput: #5A2A27;
+  --color-licorice: #1D0E0C;
+  --color-khaki:#A5978B;
 }
 
 body {

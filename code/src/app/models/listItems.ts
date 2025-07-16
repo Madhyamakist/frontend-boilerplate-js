@@ -5,7 +5,3 @@ export interface ListItem {
   artistDisplayName: string;
 }
 
-export interface Department {
-  departmentId: number;
-  displayName: string;
-}

@@ -2,27 +2,35 @@
 
 :root {
   --background: var(--color-cream);
-  --foreground: var(--color-brown);
+  --foreground: var(--color-licorice);
   --font-sans: var(--font-montserrat);
 }
 
-h1 {
+h1{
   @apply text-center
-    m-4
-    font-[700]
+    font-[600]
     text-2xl sm:text-3xl md:text-3xl lg:text-4xl;
 }
 h2 {
   @apply font-[600]
-    mx-4
-    my-2
     text-lg
     sm:text-xl
     md:text-2xl
     lg:text-2xl;
 }
+h3{
+     @apply font-[600]
+    text-base
+    sm:text-xl
+    md:text-2xl
+    lg:text-2xl;
+}
 p {
-  @apply text-justify 
-    mx-4
+  @apply 
+   text-justify
+   leading-snug
     text-sm sm:text-lg md:text-lg lg:text-lg;
+}
+a{
+    @apply text-cinereous
 }

@@ -11,19 +11,19 @@ export default function Header() {
 
     return (
         <header>
-            <div className="-m-6">
+            <div>
                 <Image
                     src="/logo.png"
                     alt="Logo"
-                    width={100}
-                    height={100}
+                    width={60}
+                    height={0}
 
                 />
             </div>
             <Link href={linkHref}>
-                <h2 className="head-text">
+                <h3>
                     {title}
-                </h2>
+                </h3>
             </Link>
 
         </header>
