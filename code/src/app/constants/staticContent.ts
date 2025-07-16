@@ -4,7 +4,7 @@ export const sections: SectionContent[] = [
   {
     heading: "TypeScript",
     text: "TypeScript is a statically typed superset of JavaScript developed by Microsoft that compiles down to plain JavaScript. It introduces static types to JavaScript, which helps catch bugs at compile time, improves developer tooling (like IntelliSense and auto-complete), and enhances code readability and maintainability. TypeScript is especially useful in large codebases and teams, as it provides better documentation through type annotations and interfaces. It integrates seamlessly with modern frameworks like React, Vue, and Node.js, making it an essential tool in scalable web application development.TypeScript has been rapidly gaining traction. Its adoption has surged from 12% in 2017 up to an impressive 35% in 2024.",
-    imageSrc: "/typescript-popularity.png", 
+    imageSrc: "./typescript-popularity.png", 
     imageAlt: "TypeScript popularity over years",
     imageTitle:"Programming, scripting, and markup language usage",
   },

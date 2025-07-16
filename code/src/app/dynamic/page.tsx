@@ -28,7 +28,7 @@ export default function HomePage() {
                         <Card
                             key={item.objectID}
                             title={item.title || 'Untitled'}
-                            image={item.primaryImageSmall || '/placeholder.jpg'}
+                            image={item.primaryImageSmall || './placeholder.jpg'}
                             subtitle={item.artistDisplayName  || 'Unknown Artist'}
                         />
                     ))}

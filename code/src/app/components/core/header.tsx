@@ -13,7 +13,7 @@ export default function Header() {
         <header>
             <div>
                 <Image
-                    src="/logo.png"
+                    src="./logo.png"
                     alt="Logo"
                     width={60}
                     height={0}
