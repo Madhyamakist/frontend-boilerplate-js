@@ -1,10 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
+import { DropdownOption } from '@/app/models/dropdownOption';
 
-export interface DropdownOption<T> {
-  label: string;
-  value: T;
-}
 
 interface DropdownProps<T> {
   label: string;
@@ -28,7 +25,7 @@ export default function Dropdown<T>({ label, fetchOptions, onSelect }: DropdownP
   };
 
   return (
-    <div className="p-4">
+    <div className="">
       <button className="btnDropdown" onClick={() => setIsOpen(!isOpen)}>
         {selectedLabel} <span className="arrow">▾</span>
       </button>

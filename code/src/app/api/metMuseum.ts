@@ -1,7 +1,13 @@
 export const fetchDepartments = async () => {
-  const res = await fetch("https://collectionapi.metmuseum.org/public/collection/v1/departments");
-  if (!res.ok) throw new Error(`Failed to fetch departments: ${res.status}`);
-  return (await res.json()).departments;
+  try {
+    const res = await fetch("https://collectionapi.metmuseum.org/public/collection/v1/departments");
+    if (!res.ok) throw new Error(`Failed to fetch departments: ${res.status}`);
+    const data = await res.json();
+    return data.departments;
+  } catch (error) {
+    console.error("fetchDepartments failed:", error); // 🔍 log here
+    throw error;
+  }
 };
 
 export const fetchListItemIDs = async (departmentId: number) => {

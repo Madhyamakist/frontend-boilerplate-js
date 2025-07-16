@@ -1,5 +1,6 @@
 'use client';
-import Dropdown, { DropdownOption } from '../components/common/dropdown';
+import Dropdown from '../components/common/dropdown';
+import { DropdownOption } from '../models/dropdownOption';
 import Card from '../components/common/card';
 import { Department } from '../models/department';
 import { fetchDepartments } from '../api/metMuseum';
@@ -14,9 +15,9 @@ export default function HomePage() {
     };
 
     return (
-        <div className="p-4 justify-center">
-            <h1>Dynamic Page</h1>
-            <h2 className="deptTxt">Select Department Type</h2>
+        <main className="p-3">
+            <h1 className='my-4'>Dynamic Page</h1>
+            <h2 className="deptTxt my-1">Select Department Type</h2>
             <Dropdown label="Select Department" fetchOptions={loadDepartments} onSelect={handleDepartmentSelect} />
 
             {loading ? (
@@ -26,13 +27,13 @@ export default function HomePage() {
                     {listItems.map(item => (
                         <Card
                             key={item.objectID}
-                            title={item.title}
-                            image={item.primaryImageSmall}
-                            subtitle={item.artistDisplayName}
+                            title={item.title || 'Untitled'}
+                            image={item.primaryImageSmall || '/placeholder.jpg'}
+                            subtitle={item.artistDisplayName  || 'Unknown Artist'}
                         />
                     ))}
                 </div>
             )}
-        </div>
+        </main>
     );
 }
