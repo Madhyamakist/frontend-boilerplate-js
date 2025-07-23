@@ -7,6 +7,7 @@ import { Department } from '../models/department';
 import { fetchDepartments } from '../api/metMuseum';
 import useDepartmentList from '../hooks/useDepartmentList';
 import LoadingMessage from '../components/common/loadingMessage';
+import ErrorMessage from '../components/common/errorMessage';
 
 export default function HomePage() {
     const { loading, listItems, error: itemListError, handleDepartmentSelect } = useDepartmentList();
@@ -30,14 +31,12 @@ export default function HomePage() {
             <h2 className="deptTxt my-1">Select Department Type</h2>
             <Dropdown label="Select Department" fetchOptions={loadDepartments} onSelect={handleDepartmentSelect} />
             {dropdownError && (
-                <p className="mt-2 text-sm text-red-600">{dropdownError}</p>
+                <ErrorMessage message={dropdownError}/>
             )}
             <LoadingMessage loading={loading} />
 
             {itemListError && (
-                <p className="mt-4 text-red-600 text-sm">
-                    {itemListError}
-                </p>
+              <ErrorMessage message={itemListError} className="mt-4 text-red-600 text-sm" />
             )}
             {!loading && !itemListError && listItems.length > 0 && (
                 <div className="objCard">

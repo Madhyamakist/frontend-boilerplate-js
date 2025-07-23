@@ -5,13 +5,14 @@ type Props = {
   loading: boolean;
 };
 
+const SLOW_LOADING_TIMEOUT = 5000;
 export default function LoadingMessage({ loading }: Props) {
   const [slowLoading, setSlowLoading] = useState(false);
 
   useEffect(() => {
     let timer: ReturnType<typeof setTimeout>;
     if (loading) {
-      timer = setTimeout(() => setSlowLoading(true), 5000);
+      timer = setTimeout(() => setSlowLoading(true), SLOW_LOADING_TIMEOUT);
     } else {
       setSlowLoading(false);
     }
