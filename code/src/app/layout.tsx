@@ -3,7 +3,8 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "./components/core/header";
 import Footer from "./components/core/footer";
-import ConnectionChecker from "./components/connectionChecker";
+import NetworkStatusBanner from "./components/common/networkStatus";
+
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -25,7 +26,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} antialiased min-h-screen flex flex-col`}
       >
-        <ConnectionChecker />
+        <NetworkStatusBanner />
         <Header />
         <main className="flex-1">{children} </main>
         <Footer />

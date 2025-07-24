@@ -6,8 +6,7 @@ import Card from '../components/common/card';
 import { Department } from '../models/department';
 import { fetchDepartments } from '../api/metMuseum';
 import useDepartmentList from '../hooks/useDepartmentList';
-import LoadingMessage from '../components/common/loadingMessage';
-import ErrorMessage from '../components/common/errorMessage';
+import AppErrorBanner from '../components/common/appError';
 
 export default function HomePage() {
     const { loading, listItems, error: itemListError, handleDepartmentSelect } = useDepartmentList();
@@ -30,14 +29,7 @@ export default function HomePage() {
             <h1 className='my-4'>Dynamic Page</h1>
             <h2 className="deptTxt my-1">Select Department Type</h2>
             <Dropdown label="Select Department" fetchOptions={loadDepartments} onSelect={handleDepartmentSelect} />
-            {dropdownError && (
-                <ErrorMessage message={dropdownError}/>
-            )}
-            <LoadingMessage loading={loading} />
-
-            {itemListError && (
-              <ErrorMessage message={itemListError} className="mt-4 text-red-600 text-sm" />
-            )}
+           <AppErrorBanner errors={[dropdownError,itemListError]} />
             {!loading && !itemListError && listItems.length > 0 && (
                 <div className="objCard">
                     {listItems.map((item) => (
